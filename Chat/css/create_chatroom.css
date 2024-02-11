@@ -1,0 +1,53 @@
+.crc {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.crc>h2 {
+    color: #3498db;
+    text-align: center;
+    font-size: 30px;
+}
+
+.crc>form {
+    margin-top: 20px;
+}
+
+.crc>form>label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.crc>form>input[type="text"],
+.crc>form>textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.crc>form>input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    
+}
+
+.crc>form>input[type="submit"]:hover {
+    background-color: #2980b9;
+}

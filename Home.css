@@ -1,0 +1,16 @@
+/* body  {
+    background-image: url("homePage1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.container1,.container3{
+    height: 44px;
+    color: #F0F3F8;
+    font-family: "Roboto", Sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    /* margin: 10px; */
+    padding: 2px;
+    background-color: #0693e3;
+    text-align: center;
+}

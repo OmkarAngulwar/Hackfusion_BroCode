@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Post</title>
+    <link rel="stylesheet" href="post.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FontAweome CDN Link for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <section class="post">
+          <header>Create Post</header>
+          <form action="post.php" method="post" enctype="multipart/form-data">
+            <div class="content">
+              <img src="anonymousIcon.webp" alt="logo" />
+              <!-- user photo -->
+              <div class="details">
+                <p>Anonymous</p>
+                <!-- user name -->
+              </div>
+            </div>
+            <!-- <label for="text">Text:</label><br> -->
+            <textarea
+              id="text"
+              name="text"
+              rows="4"
+              cols="50"
+              placeholder="Enter your text here"
+            ></textarea
+            ><br /><br />
+
+            <label for="media">Add Media:</label><br />
+            <input
+              type="file"
+              id="media"
+              name="media"
+              accept="image/*,video/*,audio/*"
+              onchange="updatePlaceholder(this)"
+            />
+            <br /><br />
+            <button type="submit">Post</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      function updatePlaceholder(input) {
+        const fileType = input.files[0].type.split("/")[0];
+        switch (fileType) {
+          case "image":
+            input.setAttribute("accept", "image/*");
+            input.setAttribute("placeholder", "Add Your Image");
+            break;
+          case "video":
+            input.setAttribute("accept", "video/*");
+            input.setAttribute("placeholder", "Add Your Video");
+            break;
+          case "audio":
+            input.setAttribute("accept", "audio/*");
+            input.setAttribute("placeholder", "Add Your Audio");
+            break;
+          default:
+            input.setAttribute("placeholder", "Add Your Media");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

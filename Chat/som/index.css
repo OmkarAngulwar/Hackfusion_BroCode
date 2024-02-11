@@ -1,0 +1,73 @@
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #ffffff; 
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff; 
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff; 
+}
+
+.nav-link {
+  color: #007bff;
+}
+
+section {
+  font-size: 30px;
+  color: #8a2be2; 
+  background-image: url('sggs2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section h1 {
+  color: #000000; 
+}
+
+.section lead {
+  color: #ffffff; 
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; 
+  border-color: #0056b3;
+}
+
+.container {
+  margin-top: 50px; 
+}
+
+.col-md-12 {
+  margin-top: 170px; 
+}

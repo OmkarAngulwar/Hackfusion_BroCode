@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Registration</title>
+    <link rel="stylesheet" href="reg.css" />
+    <script src="reg.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form
+        id="registrationForm"
+        action="reg.php"
+        method="post"
+        enctype="multipart/form-data"
+        onsubmit="return validateForm()"
+      >
+        <h2>User Registration</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="idCard">ID Card Photo:</label>
+        <input
+          type="file"
+          id="idCard"
+          name="idCard"
+          accept="image/*"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var emailInput = document.getElementById("email");
+        var emailValue = emailInput.value.trim();
+
+        // Check if the email ends with '@sggs.ac.in'
+        if (!emailValue.endsWith("@sggs.ac.in")) {
+          alert("Please enter a valid email ending with @sggs.ac.in");
+          return false;
+        }
+
+        var idCardInput = document.getElementById("idCard");
+        var idCardFile = idCardInput.files[0];
+
+        // Check if an image is selected
+        if (!idCardFile) {
+          alert("Please select an image for ID Card.");
+          return false;
+        }
+
+        // Check image type (allow only image files)
+        var allowedTypes = ["image/jpeg", "image/png", "image/gif"];
+        if (allowedTypes.indexOf(idCardFile.type) === -1) {
+          alert("Please select a valid image file (JPEG, PNG, GIF).");
+          return false;
+        }
+
+        // Check image size (limit to 5MB)
+        var maxSize = 5 * 1024 * 1024; // 5MB
+        if (idCardFile.size > maxSize) {
+          alert("Image size exceeds the limit. Please select a smaller image.");
+          return false;
+        }
+
+        var passwordInput = document.getElementById("password");
+        var confirmPasswordInput = document.getElementById("confirmPassword");
+
+        // Check if passwords match
+        if (passwordInput.value !== confirmPasswordInput.value) {
+          alert("Passwords do not match. Please enter matching passwords.");
+          return false;
+        }
+
+        return true; // Form submission will proceed if all validations pass
+      }
+    </script>
+  </body>
+</html>

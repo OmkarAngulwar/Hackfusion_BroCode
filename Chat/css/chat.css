@@ -1,0 +1,148 @@
+.chat-block{
+    margin: 1% 5%;
+    padding: 1% 5%;
+}
+.chat-block>h2 {
+    color: #333;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.chat-block>p{
+    font-weight:bold;
+    text-align: center;
+}
+#chat-container {
+    max-height: 300px;
+    overflow-y: scroll;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    margin-top: 10px;
+}
+
+#message-input {
+    padding: 5px;
+    width: 90%;
+    font-size: 20px;
+}
+
+#message-form>input[type="submit"] {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#chat-container>ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#chat-container>li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+}
+
+#chat-container>a {
+    color: #3498db;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.msg{
+    background-color: rgb(176, 173, 173);
+    align-self: start;
+    margin-bottom: 2px;
+    margin-right:5px;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+#chat-container .sender{
+    background-color: rgb(69, 244, 69);
+    align-self: end;
+    margin-bottom: 2px;
+    margin-right:5px;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+
+/* Style for Delete Chatroom link */
+a.delete-chatroom,a.leave-chatroom {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ff0000; /* Red color for emphasis */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+/* Hover effect for the "Delete Chatroom" button */
+a.delete-chatroom:hover ,a.leave-chatroom:hover{
+    background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Style for Add Member and Remove Member forms */
+.chatroom-edit>form {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chatroom-edit>form>label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.chatroom-edit>form input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.chatroom-edit>form select {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.chatroom-edit>form input[type="submit"] {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #4caf50; /* Green color for submit button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Style for Leave Chatroom link */
+
+
+/* Style for the container of the options */
+.option-container {
+    display: flex;
+    justify-content: space-between; /* Equal spacing between options */
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+
+/* Add some spacing between options */
+.option-container > * {
+    margin-right: 10px;
+
+}
+
+a.leave-chatroom {
+    margin-left: auto;
+}
